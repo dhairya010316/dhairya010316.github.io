@@ -132,8 +132,27 @@
       animation: fadeDown 0.6s ease both;
     }
 
-    h1 { font-family: 'Righteous', cursive; font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.1; color: #fff; animation: fadeUp 0.7s ease 0.1s both; }
-    h1 span { color: var(--accent); }
+    h1 {
+      font-family: 'Righteous', cursive;
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1.1;
+      background: linear-gradient(65deg, #00fff7, #a78bfa, #f472b6, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 2px #00fff7) drop-shadow(0 0 4px #a78bfa);
+      animation: fadeUp 0.7s ease 0.1s both, neonPulse 2s ease-in-out infinite alternate;
+    }
+    h1 span {
+      background: linear-gradient(65deg, #00fff7, #a78bfa, #f472b6, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @keyframes neonPulse {
+      from { filter: drop-shadow(0 0 1px #00fff7) drop-shadow(0 0 3px #a78bfa) drop-shadow(0 0 5px #f472b6); }
+      to   { filter: drop-shadow(0 0 3px #00fff7) drop-shadow(0 0 6px #a78bfa) drop-shadow(0 0 10px #f472b6); }
+    }
 
     .tagline { font-size: 1.1rem; color: #94a3b8; margin-top: 0.75rem; font-weight: 600; animation: fadeUp 0.7s ease 0.2s both; }
 
